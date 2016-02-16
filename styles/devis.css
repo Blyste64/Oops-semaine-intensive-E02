@@ -1,0 +1,108 @@
+*{
+	font-family: 'oxfam_tstar_proregular', sans-serif;
+	color:ghostwhite;
+	font-size: 20px;
+
+}
+
+
+body {
+	background-color: #2394cc;
+	font-family: 'oxfam_tstar_proregular', sans-serif;
+}
+
+
+.initLabel {
+	display: inline-block;
+	width: auto;
+	color: ghostwhite;
+	padding-right: 10px;
+}
+
+.initInput {
+	display: inline-block;
+	border: none;
+	background: none;
+	border-bottom: 2px dotted ghostwhite;
+	width: auto;
+	margin-bottom: 20px;
+	outline: none;
+}
+
+.showLabel {
+	animation-name: appear;
+	animation-duration: 2s;
+	display: inline-block;
+	padding-right: 10px;
+	color: ghostwhite;
+}
+
+.showInput {
+	animation-name: appear;
+	animation-duration: 2s;
+	display: inline-block;
+	border: none;
+	background: none;
+	border-bottom: 2px dotted ghostwhite;
+	width: auto;
+	margin-bottom: 20px;
+	outline: none;
+}
+
+.inputDevis {
+	display: none;
+}
+
+.labelDevis {
+	display: none;
+	padding-right: 10px;
+	float: left;
+	color: ghostwhite;
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 100%;
+	}
+}
+
+.bouton {
+display: none;
+
+}
+
+.showBouton{
+		animation-name: appear;
+	animation-duration: 2s;
+	display: block;
+			color: #2394cc;
+	padding: 10px;
+	background-color: white;
+	border: none;
+	float: none;
+	width: 120px;
+	height: 50px;
+	margin: auto;
+	margin-top: 30px;
+	border-radius: 3px;
+	border-bottom: 4px solid #dbdbdb;
+	transition: all 0.5s ease;
+	
+}
+
+.showBouton:hover {
+transition: all 0.3s ease;
+border-bottom: 4px solid #FFFFFF;
+	
+}
+
+#forme {
+	margin-top: 50px;
+	width: 600px;
+	margin: auto;
+	margin-top: 100px;
+		text-align: center;
+}
