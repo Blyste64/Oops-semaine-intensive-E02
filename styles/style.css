@@ -248,6 +248,11 @@ footer div div a:hover {
 
 *******************/
 
+.colorH1{
+		text-align: center;
+		padding-bottom: 10px;
+	}
+
 .containerCar{
 	margin-top: 40px;
 	width: 100%;
@@ -363,7 +368,6 @@ div#oops img {
 	SLIDER (bouton)
 
 *******************/
-
 .buttonAventure {
 	background-color: #ff8b70;
 	text-align: center;
@@ -460,10 +464,7 @@ a.white {
 		margin-bottom: 20px;
 	}
 	
-	.colorH1{
-		text-align: center;
-		padding-bottom: 10px;
-	}
+	
 	
 	.citation {
 		display: none;
