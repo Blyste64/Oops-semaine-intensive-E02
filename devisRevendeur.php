@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="styles/bootstrap.min.css" />
 	<link rel="stylesheet" href="styles/devis.css">
 	<link rel="stylesheet" href="webkit/stylesheet.css">
-	<title>Devis Revendeurs</title>
+	<title>Devis Revendeur</title>
 </head>
 
 <body id="revendeur">
@@ -64,7 +64,7 @@
 				<br>travaillez avec nous !</p>
 		</div>
 		<div id="forme">
-			<h1>Revendeurs</h1>
+			<h1>Revendeur</h1>
 			<form action="index.html" method="post">
 				<label for="nom" class="initLabel">Bonjour, je m'appelle</label>
 				<input type="text" name="nom" class="initInput" />

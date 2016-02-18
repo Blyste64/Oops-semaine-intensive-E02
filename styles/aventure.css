@@ -589,11 +589,11 @@ Media queries
   }
   .red {
     display: block;
-    margin-top: 5vw;
+    margin-top: 4vw;
   }
   .blue {
     display: block;
-    margin-top: 3vw;
+    margin-top: 2.5vw;
   }
   header .citation{
     display:none;

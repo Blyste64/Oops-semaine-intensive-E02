@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="styles/bootstrap.min.css" />
 	<link rel="stylesheet" href="styles/devis.css">
 	<link rel="stylesheet" href="webkit/stylesheet.css">
-	<title>Devis Entreprises</title>
+	<title>Devis Entreprise</title>
 </head>
 
 
@@ -68,7 +68,7 @@
 		</div>
 
 		<div id="forme">
-			<h1>Entreprises</h1>
+			<h1>Entreprise</h1>
 
 			<form action="index.html" method="post">
 
