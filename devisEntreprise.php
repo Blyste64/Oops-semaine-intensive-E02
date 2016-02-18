@@ -86,7 +86,7 @@
 			<input type="text" name="ville" class="inputDevis" />
 			<br>
 
-			<label for="salarie" class="labelDevis">Le nombre de salarié est de </label>
+			<label for="salarie" class="labelDevis">Le nombre de salariés est de </label>
 			<input type="number" name="salarie" class="inputDevis" />
 			<br>
 
@@ -98,7 +98,7 @@
 			<input type="email" name="mail" class="inputDevis" />
 			<br>
 
-			<label for="comment" class="labelDevis">Je voudrai rajouter</label>
+			<label for="comment" class="labelDevis">(Commentaire)</label>
 			<input type="text" name="comment" class="inputDevis" />
 
 

@@ -85,7 +85,7 @@
 				<label for="mail" class="labelDevis">et mon email</label>
 				<input type="email" name="mail" class="inputDevis" />
 				<br>
-				<label for="comment" class="labelDevis">Je voudrai rajouter</label>
+				<label for="comment" class="labelDevis">(Commentaire)</label>
 				<input type="text" name="comment" class="inputDevis" />
 				<input type="submit" name="send" value="SUBMIT" class="bouton" id="revendeur" />
 			</form>
