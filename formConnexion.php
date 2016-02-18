@@ -65,7 +65,7 @@
 
 	<div id="formConnexion">
 		<p class="connexion">Connectez-vous pour voir vos nouveaux devis</p>
-		<form action="connexion.php" method="post">
+		<form action="index.html" method="post">
 			<input type="admin" name="admin" class="inputConnexion" />
 			<input type="password" name="pass" class="inputConnexion" />
 			<input type="submit" name="connexion" value="Se connecter" class="boutonConnexion" />
