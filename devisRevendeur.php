@@ -30,7 +30,7 @@
 							</ul>
 						</li>
 						<li><a href="index.html" title="Aventure">Aventure</a></li>
-						<li><a href="#" title="Connexion">Espace membre</a></li>
+						<li><a href="formConnexion.php" title="connexion">Espace membre</a></li>
 					</ul>
 					<ul class="menuBurger">
 						<li>
@@ -42,7 +42,7 @@
 								</button>
 							</div>
 							<ul>
-								<li><a href="#" title="connexion">Connexion</a></li>
+								<li><a href="formConnexion.php" title="connexion">Espace membre</a></li>
 
 								<li><a href="index.html" title="aventure">Aventure</a></li>
 								<li><a href="#" title="devis" class="menuDevis">Contact</a>
