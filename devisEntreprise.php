@@ -4,10 +4,9 @@
 
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="styles/devis.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="webkit/stylesheet.css">
     <link rel="stylesheet" href="styles/bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css">
     <title>Devis entreprise</title>
   </head>
 
@@ -105,7 +104,7 @@
     </div>
 
 
-    <script src="scripts/devis.js"></script>
+    <script src="scripts/main.js"></script>
   </body>
 
   </html>

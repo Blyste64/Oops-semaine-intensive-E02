@@ -3,9 +3,12 @@
 			GLOBAL
 
 *******************/
+*{
+	font-family: 'oxfam_tstar_proregular', sans-serif;
+}
 
 body {
-	font-family: 'oxfam_tstar_proregular', sans-serif;
+	
 	background: #ffffff;
 	width: 100%;
 }
