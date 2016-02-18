@@ -454,8 +454,16 @@ footer div div a:hover {
 @MEDIA QUERIES
 
 *************/
+
+@media screen and (max-width:768px){
+	.containerCar{
+		height:150px;
+	}
+	
+}
+
 @media screen and (max-width:991px) {
-	.content {
+		.content {
 		width: 100%;
 		border-radius: 0;
 	}
@@ -463,9 +471,16 @@ footer div div a:hover {
 		padding-right: 0;
 		padding-left: 0;
 	}
-}
-
-@media screen and (max-width:991px) {
+	
+	.containerCar{
+		margin-bottom: 20px;
+	}
+	
+	.colorH1{
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	
 	.citation {
 		display: none;
 	}
