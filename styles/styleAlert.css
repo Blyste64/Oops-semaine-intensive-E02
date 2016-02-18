@@ -1,0 +1,14 @@
+
+a{
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+}
+
+.messageAlerte{
+  
+  width: 300px;
+  margin: auto;
+  margin-top: 200px;
+}

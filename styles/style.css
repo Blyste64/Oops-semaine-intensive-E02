@@ -1,3 +1,9 @@
+/*******************
+
+			GLOBAL
+
+*******************/
+
 body {
 	font-family: 'oxfam_tstar_proregular', sans-serif;
 	background: #ffffff;
@@ -8,12 +14,19 @@ body {
 	clear: both;
 }
 
+a:hover {
+	text-decoration: none;
+}
 
-/***********
 
-header
 
-***********/
+
+
+/*******************
+
+			HEADER
+
+*******************/
 
 header {
 	width: 100%;
@@ -21,6 +34,12 @@ header {
 	z-index: 1000;
 	position: fixed;
 }
+
+/*******************
+
+	Header (logo)
+
+*******************/
 
 header p {
 	padding-top: 13px;
@@ -51,12 +70,11 @@ header span {
 	height: 60px;
 }
 
+/*******************
 
-/***********
+	Header (menu)
 
-		Menu
-
-***********/
+*******************/
 
 header .menuNormal {
 	list-style: none;
@@ -117,12 +135,11 @@ header .menuNormal > li:hover > ul {
 	font-weight: 700;
 }
 
+/*******************
 
-/********
+	Header (burger)
 
-menu burger
-
-*********/
+*******************/
 
 .menuBurger {
 	display: none;
@@ -189,39 +206,55 @@ menu burger
 }
 
 
-/*.navbar-toggle .icon-bar:nth-of-type(2) {
-top: 1px;
+
+/*****************
+
+FOOTER
+
+*****************/
+
+footer {
+	background-color: #ececec;
+	padding: 10px;
+	text-align: center;
+	margin-top: 40px;
 }
 
-.navbar-toggle .icon-bar:nth-of-type(3) {
-top: 2px;
+.foot {
+	border-right: 1px solid black;
 }
 
-.navbar-toggle .icon-bar {
-position: relative;
-transition: all 500ms ease-in-out;
+#all:first-child {
+	border-left: 1px solid black;
 }
 
-.navbar-toggle.active .icon-bar:nth-of-type(1) {
-top: 6px;
-transform: rotate(45deg);
+footer div div a {
+	color: black;
 }
 
-.navbar-toggle.active .icon-bar:nth-of-type(2) {
-background-color: transparent;
+footer div div a:hover {
+	color: black;
 }
 
-.navbar-toggle.active .icon-bar:nth-of-type(3) {
-top: -6px;
-transform: rotate(-45deg);
-}*/
 
 
-/***********
+/***************************
 
-Slider
+		Index.html
 
-**********/
+***************************/
+
+/*******************
+
+			SLIDER
+
+*******************/
+
+.containerCar{
+	margin-top: 40px;
+	width: 100%;
+	position: relative;
+}
 
 .fullwidth {
 	width: 100%;
@@ -275,12 +308,63 @@ Slider
 	background-size: 100%;
 }
 
+/*******************
 
-/*********
+	SLIDER (Animation oops)
 
-button
+*******************/
 
-*********/
+#oops {
+	height: 300px;
+	position: absolute;
+	top: 25%;
+	left: 45%;
+}
+
+div#oops img {
+	width: 100%;
+}
+
+
+#oops {
+	animation: bounce 10s ease;
+	animation-name: floating;
+	-webkit-animation-name: floating;
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+	0% {
+		transform: translateY(0%);
+	}
+	50% {
+		transform: translateY(8%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@-webkit-keyframes floating {
+	0% {
+		-webkit-transform: translateY(0%);
+	}
+	50% {
+		-webkit-transform: translateY(8%);
+	}
+	100% {
+		-webkit-transform: translateY(0%);
+	}
+}
+
+/*******************
+
+	SLIDER (bouton)
+
+*******************/
 
 .buttonAventure {
 	background-color: #ff8b70;
@@ -326,10 +410,6 @@ button
 	border-bottom: 4px solid #4fd0c7;
 }
 
-a:hover {
-	text-decoration: none;
-}
-
 a.white {
 	margin: auto;
 	color: white;
@@ -343,12 +423,6 @@ a.white {
 	margin: auto;
 }
 
-.containerCar {
-	margin-top: 40px;
-	width: 100%;
-	position: relative;
-}
-
 .content {
 	margin-top: -5vw;
 	background: #f9f9f9;
@@ -358,94 +432,6 @@ a.white {
 
 #entreprise {
 	margin-bottom: 50px;
-}
-
-/*************
-
-ANIMATION OOPS
-
-*************/
-
-#oops {
-	height: 300px;
-	position: absolute;
-	top: 25%;
-	left: 45%;
-}
-
-div#oops img {
-	width: 100%;
-}
-
-
-/************
-oops FLOTTE
-
-
-********************/
-
-#oops {
-	animation: bounce 10s ease;
-	animation-name: floating;
-	-webkit-animation-name: floating;
-	animation-duration: 3s;
-	-webkit-animation-duration: 3s;
-	animation-iteration-count: infinite;
-	-webkit-animation-iteration-count: infinite;
-}
-
-@keyframes floating {
-	0% {
-		transform: translateY(0%);
-	}
-	50% {
-		transform: translateY(8%);
-	}
-	100% {
-		transform: translateY(0%);
-	}
-}
-
-@-webkit-keyframes floating {
-	0% {
-		-webkit-transform: translateY(0%);
-	}
-	50% {
-		-webkit-transform: translateY(8%);
-	}
-	100% {
-		-webkit-transform: translateY(0%);
-	}
-}
-
-
-/*************
-
-FOOTER
-
-*************/
-
-footer {
-	background-color: #ececec;
-	padding: 10px;
-	text-align: center;
-	margin-top: 40px;
-}
-
-.foot {
-	border-right: 1px solid black;
-}
-
-#all:first-child {
-	border-left: 1px solid black;
-}
-
-footer div div a {
-	color: black;
-}
-
-footer div div a:hover {
-	color: black;
 }
 
 
@@ -545,3 +531,12 @@ footer div div a:hover {
 		font-weight: 700;
 	}
 }
+
+
+
+
+/***************************
+
+		devis.php
+
+***************************/
