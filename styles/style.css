@@ -177,72 +177,6 @@ menu burger
 }
 
 
-@media screen and (max-width:991px) {
-	.citation {
-		display: none;
-	}
-	.navbar-toggle {
-		display: block;
-	}
-	.menuNormal {
-		display: none;
-	}
-	.menuBurger {
-		list-style: none;
-		display: block;
-		margin-top: -8px;
-	}
-	.menuBurger:hover > li > ul {
-		display: block;
-		animation-name: slideMenu;
-		width: 50%;
-		animation-duration: 1s;
-	}
-	.menuBurger > li > ul {
-		position: absolute;
-		list-style: none;
-		top: 0;
-		right: 0;
-		display: none;
-		height: auto;
-		background-color: #ffffff;
-		padding-top: 50px;
-		border-radius: 0px 0px 0px 8px;
-		padding-bottom: 10px;
-	}
-	.menuBurger > li > ul > li {
-		padding: 10px 0;
-		transition: all 0.5s ease-in-out;
-	}
-	.menuBurger > li > ul > li > a {
-		color: #cf1715;
-		transition: all 0.3s ease-in-out;
-		text-decoration: none;
-	}
-	.menuBurger > li > ul > li:hover > a {
-		font-weight: 700;
-	}
-	.menuBurger > li > ul > li > ul {
-		padding-bottom: 10px;
-		padding-left: 2px;
-		margin: 0;
-		display: none;
-	}
-	.menuBurger > li > ul > li:hover > ul {
-		display: block;
-		list-style: none;
-	}
-	.menuBurger > li > ul > li > ul > li > a {
-		color: #cf1715;
-	}
-	.menuBurger > li > ul > li > ul > li {
-		padding-top: 15px;
-	}
-	.menuBurger > li > ul > li > ul > li:hover > a {
-		font-weight: 700;
-	}
-}
-
 @keyframes slideMenu {
 	from {
 		margin-right: -10%;
@@ -417,7 +351,7 @@ a.white {
 
 .content {
 	margin-top: -5vw;
-	background: #ececec;
+	background: #f9f9f9;
 	border-radius: 5px;
 	padding: 30px;
 }
@@ -425,18 +359,6 @@ a.white {
 #entreprise {
 	margin-bottom: 50px;
 }
-
-@media screen and (max-width:991px) {
-	.content {
-		width: 100%;
-		border-radius: 0;
-	}
-	.container-fluid {
-		padding-right: 0;
-		padding-left: 0;
-	}
-}
-
 
 /*************
 
@@ -524,4 +446,87 @@ footer div div a {
 
 footer div div a:hover {
 	color: black;
+}
+
+
+/*************
+
+@MEDIA QUERIES
+
+*************/
+@media screen and (max-width:991px) {
+	.content {
+		width: 100%;
+		border-radius: 0;
+	}
+	.container-fluid {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+@media screen and (max-width:991px) {
+	.citation {
+		display: none;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.menuNormal {
+		display: none;
+	}
+	.menuBurger {
+		list-style: none;
+		display: block;
+		margin-top: -8px;
+	}
+	.menuBurger:hover > li > ul {
+		display: block;
+		animation-name: slideMenu;
+		width: 50%;
+		animation-duration: 1s;
+	}
+	.menuBurger > li > ul {
+		position: absolute;
+		list-style: none;
+		top: 0;
+		right: 0;
+		display: none;
+		height: auto;
+		background-color: #ffffff;
+		padding-top: 50px;
+		border-radius: 0px 0px 0px 8px;
+		padding-bottom: 10px;
+	}
+	.menuBurger > li > ul > li {
+		padding: 10px 0;
+		transition: all 0.5s ease-in-out;
+	}
+	.menuBurger > li > ul > li > a {
+		color: #cf1715;
+		transition: all 0.3s ease-in-out;
+		text-decoration: none;
+	}
+	.menuBurger > li > ul > li:hover > a {
+		font-weight: 700;
+	}
+	.menuBurger > li > ul > li > ul {
+		padding-bottom: 10px;
+		padding-left: 2px;
+		margin: 0;
+		display: none;
+	}
+	.menuBurger > li > ul > li:hover > ul {
+		display: block;
+		list-style: none;
+	}
+	.menuBurger > li > ul > li > ul > li > a {
+		color: #cf1715;
+	}
+	.menuBurger > li > ul > li > ul > li {
+		padding-top: 15px;
+	}
+	.menuBurger > li > ul > li > ul > li:hover > a {
+		font-weight: 700;
+	}
 }
