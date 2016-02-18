@@ -55,7 +55,7 @@ header span {
 
 /***********
 
-		Menu
+Menu
 
 ***********/
 
@@ -326,7 +326,7 @@ acceuil
 
 .acceuilRevendeur h1 {
   padding-top: 10vw;
-  font-size:5vw;
+  font-size: 5vw;
 }
 
 
@@ -390,7 +390,7 @@ Presentation
   text-align: center;
   color: #ffffff;
   margin-top: 5vw;
-  z-index:50;
+  z-index: 50;
 }
 
 .pres section h2 {
@@ -409,7 +409,7 @@ Presentation
   text-align: center;
   color: #ffffff;
   margin-top: 5vw;
-  z-index:50;
+  z-index: 50;
 }
 
 .pres2 section h2 {
@@ -428,7 +428,7 @@ Presentation
   text-align: center;
   color: #ffffff;
   margin-top: 2vw;
-  z-index:50;
+  z-index: 50;
 }
 
 .pres3 section h2 {
@@ -451,39 +451,48 @@ Presentation
   margin-top: 15%;
 }
 
-#devis{
-  padding-top:20vw;
+#devis {
+  padding-top: 20vw;
 }
 
-#devis2{
-  padding-top:5vw;
+#devis h2 {
+  margin-bottom: 0;
 }
 
-#clikCollect{
-  margin-top:23%;
+#devis2 {
+  padding-top: 5vw;
+}
+
+#devis2 h2 {
+  margin-bottom: 1vw;
+}
+
+#clikCollect {
+  margin-top: 23%;
 }
 
 #portee h2 {
   margin-bottom: 80px;
 }
 
-.red{
-  width:100%;
-  height:80vw;
+.red {
+  width: 100%;
+  height: 80vw;
   background: #ff8b70;
-  margin-top:-3vw;
-  z-index:-1000;
+  margin-top: -3vw;
+  z-index: -1000;
   display: none;
 }
 
-.blue{
-  width:100%;
-  height:80vw;
+.blue {
+  width: 100%;
+  height: 80vw;
   background: #2394CC;
-  margin-top:-3vw;
-  z-index:-1000;
+  margin-top: -3vw;
+  z-index: -1000;
   display: none;
 }
+
 
 /***************
 
@@ -493,6 +502,10 @@ Section pro
 
 #pro {
   margin-top: 2vw;
+}
+
+#pro h2 {
+  margin-bottom: 1vw;
 }
 
 #pro div {
@@ -525,14 +538,6 @@ Section pro
   width: 40px;
 }
 
-#devis {
-  margin-top: 0;
-}
-
-#devis h2 {
-  margin-bottom: 0;
-}
-
 
 /***************
 
@@ -544,6 +549,27 @@ Media queries
   .acceuil .titres {
     width: 90%;
     margin: 50vw 5%;
+  }
+  .acceuil .titres h1 {
+    font-size: 5vw;
+  }
+  .acceuil .titres h2 {
+    font-size: 4vw;
+  }
+  .acceuil .titres #mouse {
+    width: 6vw;
+  }
+  .acceuilRevendeur h1 {
+    font-size: 7vw;
+  }
+  #pro div {
+    font-size: 3vw;
+  }
+  #buttons a {
+    font-size: 4vw;
+  }
+  .acceuilEntreprise h1 {
+    font-size: 7vw;
   }
   .pres section {
     margin-top: 3vw;
@@ -561,14 +587,19 @@ Media queries
     margin-bottom: 1vw;
     padding: 0px 50px;
   }
-  .red{
-    display:block;
-    margin-top:-4vw;
+  .red {
+    display: block;
+    margin-top: 5vw;
   }
-  
-  .blue{
-    display:block;
-    margin-top:10.1vw;
+  .blue {
+    display: block;
+    margin-top: 3vw;
+  }
+  header .citation{
+    display:none;
+  }
+  header img{
+    width:50%;
   }
 }
 
@@ -577,8 +608,29 @@ Media queries
     width: 90%;
     margin: 55vw 5%;
   }
+  .acceuil .titres h1 {
+    font-size: 5vw;
+  }
+  .acceuil .titres h2 {
+    font-size: 4vw;
+  }
+  .acceuil .titres #mouse {
+    width: 6vw;
+  }
+  .acceuilRevendeur h1 {
+    font-size: 7vw;
+  }
+  #pro div {
+    font-size: 3vw;
+  }
+  #buttons a {
+    font-size: 4vw;
+  }
+  .acceuilEntreprise h1 {
+    font-size: 7vw;
+  }
   .pres section {
-    margin-top: 3vw;
+    margin-top: 0vw;
   }
   #madeInFrance {
     margin-top: 170%;
@@ -587,21 +639,53 @@ Media queries
     top: 80%;
   }
   .pres section h2 {
-    font-size: 2.5vw;
+    font-size: 3.2vw;
     width: 80%;
     margin: 0% 10%;
     margin-bottom: 1vw;
     padding: 0px 50px;
+    font-weight: 700;
   }
-  .red{
-    display:block;
-    height:100vw;
+  .pres2 section h2 {
+    font-size: 3.2vw;
+    width: 80%;
+    margin: 0% 10%;
+    margin-bottom: 1vw;
+    padding: 0px 50px;
+    font-weight: 700;
   }
-  
-  .blue{
-    display:block;
-    height:100vw;
-    margin-top:7vw;
+  .pres3 section h2 {
+    font-size: 3.2vw;
+    width: 80%;
+    margin: 0% 10%;
+    margin-bottom: 1vw;
+    padding: 0px 50px;
+    font-weight: 700;
+  }
+  .pres section h2 strong {
+    font-weight: 900;
+  }
+  #devis div {
+    font-size: 2.7vw;
+  }
+  #devis h2 {
+    font-size: 3.2vw;
+  }
+  #devis2 div {
+    font-size: 2.7vw;
+  }
+  #devis2 h2 {
+    font-size: 3.2vw;
+  }
+  .red {
+    display: block;
+    height: 70vw;
+    margin-top: -5vw;
+  }
+  .blue {
+    display: block;
+    height: 100vw;
+    margin-top: -5vw;
   }
 }
 
@@ -610,7 +694,7 @@ Media queries
     margin-top: 80%;
   }
   .pres section {
-    margin-top: 5vw;
+    margin-top: 7vw;
   }
   .pres2 section {
     text-align: center;

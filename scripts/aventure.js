@@ -9,6 +9,15 @@ var fooRevealBottom = {
   viewFactor: 0.6,
 };
 
+var fooRevealScale = {
+  distance: '0px',
+  origin: 'center',
+  ease: 'cubic-bezier(0.25,0.76,1,0.98)',
+  scale: 0.7,
+  reset: 'true',
+  viewFactor: 0.6,
+};
+
 var fooRevealUp = {
   distance: '90px',
   origin: 'top',
@@ -22,6 +31,7 @@ window.sr = ScrollReveal();
 sr.reveal('.foo', fooRevealBottom);
 sr.reveal('.pull-right', fooRevealBottom);
 sr.reveal('.pull-up', fooRevealUp);
+sr.reveal('.foot', fooRevealScale)
 
 /************
 
