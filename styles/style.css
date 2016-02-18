@@ -242,13 +242,15 @@ menu burger
 	}
 }
 
-@media screen and (max-width:900px) {
+
+
+@media screen and (max-width:991px) {
 	.citation {
 		display: none;
 	}
-}
-
-@media screen and (max-width:767px) {
+	.navbar-toggle {
+		display: block;
+	}
 	.menuNormal {
 		display: none;
 	}
@@ -307,6 +309,7 @@ menu burger
 		font-weight: 700;
 	}
 }
+
 @keyframes slideMenu {
 	from {
 		margin-right: -10%;
@@ -484,6 +487,21 @@ a.white {
 	background: #ececec;
 	border-radius: 5px;
 	padding: 30px;
+}
+
+#entreprise {
+	margin-bottom: 50px;
+}
+
+@media screen and (max-width:991px) {
+	.content {
+		width: 100%;
+		border-radius: 0;
+	}
+	.container-fluid {
+		padding-right: 0;
+		padding-left: 0;
+	}
 }
 
 
