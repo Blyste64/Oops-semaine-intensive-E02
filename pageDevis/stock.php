@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 
 session_start();
@@ -66,12 +67,24 @@ if(isset($_POST["connexion"])){
           $_SESSION["admin"] = $_POST["admin"];
 
           $_SESSION["pass"] = $_POST["pass"];
+
+
 ?>
 
 
-<!--------------------affichage des devis ------------------>
-<ul id="devis">
-  <?php
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/styleDevis.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <title>administration</title>
+  </head>
+  <body>
+
+
+    <!--------------------affichage des devis ------------------>
+    <ul id="devis">
+      <?php
 
 
 
@@ -79,36 +92,35 @@ if(isset($_POST["connexion"])){
           {
             echo '
 
- <article class="corps">
+             <article class="corps">
 
-  <h2><a href="#">'.$nw['objet'].'</a></h2>
+              <h2 class="objet"><a href="#"> objet : '.$nw['objet'].'</a></h2>
 
- <h3><a href="#">'.$nw['nom'].'</a></h3>
-
-
-
- <h3><a href="#">'.$nw['entreprise'].'</a></h3>
+              <h3 class="secondaire"><a href="#">nom : '.$nw['nom'].'</a></h3>
+              <h3 class="secondaire"><a href="#"> nom de la compagnie  : '.$nw['entreprise'].'</a></h3>
 
 
- <p>'.$nw['ville'].'</p>
-  <p>'.$nw['tel'].'</p>
-   <p>'.$nw['salarie'].'</p>
- <p>'.$nw['comment'].'</p>
 
- <p>'.$nw['mail'].'</p>
+              <p class="info">ville : '.$nw['ville'].'</p>
+              <p class="info"> nombre de salarié '.$nw['salarie'].'</p>
+              <p class="info">commenataire :  '.$nw['comment'].'</p>
+               <p class="info">email : '.$nw['mail'].'</p>
+              <p class="info">telephone : '.$nw['tel'].'</p>
 
- <p><a href="#"> Voir l\'actualité</a></p>
- <p><a href="actu.php?delete='.$nw['id'].'">Supprimer</a></p>
- </div>
- </div><!-- /.entry-content -->
+<p><a href="connexion.php?delete='.$nw['id'].'">Supprimer</a></p>
 
- </article>';
+
+
+             </article>';
+            /* if(isset($_POST["sup"])){   
+       mysql_query("DELETE FROM form WHERE id = .$nw[id]. ");
+      header("index.php");
+        }*/
+
           }
-
-
-  ?>
-</ul>
-<?php
+      ?>
+    </ul>
+    <?php
 
           /* affichage des erreur */
 
@@ -149,17 +161,21 @@ if(isset($_POST["connexion"])){
   }
 
 }
-?>
+    ?>
 
-<? mysql_close($BDD);
+    <? mysql_close($BDD);
 
-?>
+    ?>
 
 
 
-<?php if($error == TRUE){ echo "<p><strong>".$errorMSG."</strong></p>"; } ?>
+    <?php if($error == TRUE){ echo "<p><strong>".$errorMSG."</strong></p>"; } ?>
 
-<?php if($connexionOK == TRUE)
+    <?php if($connexionOK == TRUE)
 { echo "<p><strong>".$connexionMSG."</strong></p>"; } 
 
-?>
+    ?>
+
+
+  </body>
+</html>

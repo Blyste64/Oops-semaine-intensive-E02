@@ -2,49 +2,132 @@
 <html lang="fr">
 
 <head>
-  <meta charset="utf-8" />
-  <title>Template</title>
-  <link rel="stylesheet" href="styles/bootstrap.min.css" />
-  <link rel="stylesheet" href="styles/style.css" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<title>Oops</title>
+	<link rel="stylesheet" href="styles/bootstrap.min.css" />
+	<link rel="stylesheet" href="styles/style.css" />
+	<link rel="stylesheet" href="webkit/stylesheet.css" />
+	<link rel="stylesheet" type="text/css" href="slick/slick.css" />
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 </head>
 
 <body>
-  <header>
-    <p>Un super header</p>
-  </header>
-  <div class="container-fluid">
-    <section id="topTitle" class="col-xs-6-centered">
-      <h2>Découvrez Oops</h2>
-      <h1>pour votre entreprise</h1>
-      <div class="col-xs-6">
-        <img src="images/arrowDown.png" alt="Arrow Down" class="arrows">
-      </div>
-      <div class="col-xs-6">
-        <img src="images/arrowDown.png" alt="Arrow Down" class="arrows">
-      </div>
-    </section>
-    <section id="oopsSection">
-      <img src="images/Oops.png" alt="Oops" id="oops">
-    </section>
-    <div class="clearBoth"></div>
-    <section id="madeInFrance" class="col-xs-5 foo">
-      <h2>Made in France</h2>
-      <p>un produit entièrement fabriqué en France</p>
-    </section>
-    <div class="clearBoth"></div>
-    <section id="madeInFrance" class="col-xs-5 pull-right foo">
-      <h2>Made in France</h2>
-      <p>un produit entièrement fabriqué en France</p>
-    </section>
-    <div class="clearBoth"></div>
-    <section id="madeInFrance" class="col-xs-5 foo">
-      <h2>Made in France</h2>
-      <p>un produit entièrement fabriqué en France</p>
-    </section>
-  </div>
-  <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.9/scrollreveal.min.js"></script>
-  <script src="scripts/jquery-1.12.0.min.js"></script>
-  <script src="scripts/main.js"></script>
+	<header id="header">
+		<div class="bgBlank">
+			<div class="col-xs-4 col">
+				<a href="index.html" title="accueil"><img src="images/logo_oops.png" alt="Logo oops" /></a>
+				<span class="citation">Un clic pour tout retrouver...<br>Même le sourire !</span>
+			</div>
+			<div class="col-xs-8 menu">
+				<nav>
+					<ul class="menuNormal">
+						<li><a href="#" title="devis" class="menuDevis">Contact</a>
+							<ul class="sousMenu">
+								<li><a href="#" title="devisEntreprise">Entreprise</a></li>
+								<li><a href="#" title="devisRevendeur">Revendeur</a></li>
+							</ul>
+						</li>
+						<li><a href="pagesAventure/index.html" title="Aventure">Aventure</a></li>
+						<li><a href="#" title="Connexion">Espace membre</a></li>
+					</ul>
+					<ul class="menuBurger">
+						<li>
+							<div class="navbar-inverse ">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" id="burger" data-target=".navbar-collapse" onclick=changerClass()>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							<ul>
+								<li><a href="#" title="connexion">Connexion</a></li>
+
+								<li><a href="#" title="aventure">Aventure</a></li>
+								<li><a href="#" title="devis" class="menuDevis">Devis</a>
+									<ul class="sousMenu">
+										<li><a href="#" title="devisEntreprise">Entreprise</a></li>
+										<li><a href="#" title="devisRevendeur">Revendeur</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="containerCar">
+		<div class="row fullwidth">
+			<div class=" slider">
+				<div class="text-center slide" id="slide1"></div>
+				<div class="text-center slide" id="slide2"></div>
+				<div class="text-center slide" id="slide3"></div>
+				<div class="text-center slide" id="slide4"></div>
+			</div>
+		</div>
+		<div id="oops" class="col-md-1 col-sm-1 hidden-xs "><img id="oopsTete" alt="oops" src="images/oopsNeutre.png"></div>
+
+		<div class="buttonAventure">
+			<a class="white" href="pagesAventure/index.html">Vivez l'aventure Oops</a>
+		</div>
+	</div>
+
+
+	<div class="clearBoth"></div>
+	<div class="container-fluid">
+		<div id="entreprise" class="content  col-md-offset-1 col-md-4 col-sm-4 col-xs-12">
+			<div class="center">
+				<h1>Avantages entreprise</h1>
+				<ul>
+					<li> Offrez un cadeau à vos employés</li>
+					<li>Faîtes-les sourire</li>
+					<li>Communiquez l'image de votre entreprise en le personnalisant</li>
+					<li>Adaptez-le à tous vos services</li>
+					<li>À un tarif préférentiel</li>
+				</ul>
+				<div class="buttonDevis">
+					<a class="white" href="pageDevis/devisEntreprise.php" title="devis entreprise">Remplir un devis entreprise</a>
+				</div>
+			</div>
+		</div>
+		<div id="revendeur" class="content col-sm-offset-4 col-md-4 col-md-offset-2 col-sm-4 col-xs-12">
+			<div class="center">
+				<h1>Avantages revendeur</h1>
+				<div class="ecart">
+					<ul>
+						<li>Offrir à ses clients le service </br>Web to store &amp; Click and collect</li>
+						<li>Distribuez Oops</li>
+						<li>Profitez d'une visibilé accrue </li>
+						<li>Rejoignez le réseau de oops'entreprise</li>
+						<li>Élargissez votre clientèle</li>
+					</ul>
+				</div>
+				<div class="buttonDevis">
+					<a class="white" href="pageDevis/devisRevendeur.php" title="devis revendeurs">Remplir un devis revendeur</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clearBoth"></div>
+
+	<footer>
+		<div id="all" class=" col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-12">
+			<div class="foot col-md-2 col-sm-2 col-xs-4"><a href="#" title="suivez-nous">Suivez-nous</a></div>
+			<div class="foot col-md-2 col-sm-2 col-xs-4"><a href="#" title="remerciement">Oops remercie</a></div>
+			<div class="foot col-md-2 col-sm-2 col-xs-4"><a href="#" title="FAQ">FAQ</a></div>
+			<div class="foot col-md-2 col-sm-2 col-xs-4"><a href="#" title="contact">Contact</a></div>
+			<div class="foot col-md-2 col-sm-2 col-xs-4"><a href="#" title="CVG">CVG</a></div>
+			<div class="foot col-md-2 col-sm-2 col-xs-4"><a href="#" title="mention">Mention</a></div>
+		</div>
+		<div class="clearBoth"></div>
+	</footer>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script src="scripts/main.js"></script>
 </body>
 
 </html>

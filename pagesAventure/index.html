@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Oops</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="styles/bootstrap.min.css" />
+  <link rel="stylesheet" href="webkit/stylesheet.css" />
+  <link rel="stylesheet" href="styles/animsition.min.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body onscroll='herve()'>
+  <header>
+    <div class="bgBlank">
+      <div class="col-xs-6 col">
+        <a href="../index.html" title="accueil"><img src="images/logo_oops.png" alt="Logo oops" /></a>
+        <span>Un clic pour tout retrouver...<br>Même le sourire !</span>
+      </div>
+      <div class="col-xs-6 menu">
+        <nav>
+          <ul class="menuNormal">
+            <li><a href="#" title="Connexion">Espace membre</a></li>
+            <li><a href="index.html" title="Aventure">Aventure</a></li>
+            <li><a href="../pageDevis/devisEntreprise.php" title="devis entreprises">Devis Entreprises</a></li>
+            <li><a href="../pageDevis/devisRevendeur.php" title="devis revendeurs">Devis Revendeurs</a></li>
+          </ul>
+          <ul class="menuBurger">
+            <li>
+              <div class="navbar-inverse ">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" id="burger" data-target=".navbar-collapse" onclick=changerClass()>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <ul>
+                <li><a href="#" title="connexion">connexion</a></li>
+                <li><a href="#" title="devis" class="menuDevis">devis</a>
+                  <ul class="sousMenu">
+                    <li><a href="#" title="devisEntreprise">entreprise</a></li>
+                    <li><a href="#" title="devisRevendeur">revendeur</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" title="aventure">aventure</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <section class="acceuil">
+    <div class="titres">
+      <h1 class="pull-up">Oops, un objet connecté</h1>
+      <h1 class="pull-up">qui s'adapte au monde professionnel</h1>
+      <img src="images/rellOops.png" alt="Oops" id="realOops" class="pull-up">
+      <h2 class="pull-up">Faites défiler l'écran avec la molette de la souris</h2>
+      <img src="images/mouse-peripheral.png" alt="souris" id="mouse" class="pull-up">
+    </div>
+  </section>
+  <section class="fond">
+    <img src="images/fond.svg" alt="Fond" id="fond">
+  </section>
+  <section class="nuages">
+    <img src="images/nuage.svg" alt="nuages" id="nuages" data-0="top: 0px;" data-2000="top:-700px;">
+  </section>
+  <div class="container-fluid">
+    <section id="oopsSection">
+      <img src="images/Herve.png" alt="Hervé le PDG" id="herve">
+    </section>
+    <div class="clearBoth"></div>
+    <section class="pres">
+      <section id="madeInFrance" class="col-xs-5 foo" id="scene">
+        <h2>Un produit 100% français</h2>
+        <img src="images/made_in_france.png" alt="Made in France" id="animation">
+      </section>
+      <div class="clearBoth"></div>
+      <section id="retrouvez" class="col-xs-5 pull-right foo">
+        <h2>Un petit appareil qui permet de tout retrouver</h2>
+        <img src="images/Retrouver.png" alt="Retrouver">
+      </section>
+      <div class="clearBoth"></div>
+      <section id="portee" class="col-xs-5 foo">
+        <h2>Avec une portée de plus de 50 mètres</h2>
+        <img src="images/Portee.png" alt="Portee">
+      </section>
+      <div class="clearBoth"></div>
+      <section id="selfoops" class="col-xs-5 pull-right foo">
+        <h2>On peux même prendre des SELFOOPS avec</h2>
+        <img src="images/Selfoops.png" alt="Selfoops">
+      </section>
+      <div class="clearBoth"></div>
+      <section id="simple" class="col-xs-5 foo">
+        <h2>Et tout ca extremement simplement</h2>
+        <img src="images/Simplicite.png" alt="Simple">
+      </section>
+      <div class="clearBoth"></div>
+      <section id="pro" class="col-xs-5 foo pull-right">
+        <h2>Et pour les professionels nous proposons 2 offres</h2>
+        <div>Cliquez sur celle qui vous intéresse</div>
+        <img src="images/click.svg" alt="click" id="click">
+      </section>
+      <div class="clearBoth"></div>
+      <section id="buttons">
+        <div class="col-xs-5 foo">
+          <a href="revendeur.html" class="animsition-link" data-animsition-out-class="fade-out-right" data-animsition-in-class="fade-in-right">Revendeurs</a>
+        </div>
+        <div class="col-xs-5 foo col-xs-offset-2">
+          <a href="entreprise.html" class="animsition-link">Entreprises</a>
+        </div>
+      </section>
+    </section>
+    <div class="clearBoth"></div>
+  </div>
+  <script src="scripts/scrollreveal.min.js"></script>
+  <script src="scripts/jquery-1.12.0.min.js"></script>
+  <script src="scripts/skrollr.min.js"></script>
+  <script>
+  </script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
