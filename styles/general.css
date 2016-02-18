@@ -1,16 +1,269 @@
 /*-----------------------------------------------------------*/
 /*---------------------------general-------------------------*/
 /*-----------------------------------------------------------*/
-
-body{
-  background-color: #2394cc;
-  font-family: 'oxfam_tstar_proregular', sans-serif;
+ *{
+	 font-family: 'oxfam_tstar_proregular', sans-serif;
   color: white;
+}
+body{
+  background-color: #4fd0c7;
 }
 
 .clear{
   clear: both;
 }
+
+/*******************
+
+			HEADER
+
+*******************/
+
+header {
+	width: 100%;
+	height: 70px;
+	z-index: 1000;
+	position: fixed;
+}
+
+/*******************
+
+	Header (logo)
+
+*******************/
+
+header p {
+	padding-top: 13px;
+}
+
+header img {
+	margin-left: 50px;
+	width: 60px;
+	float: left;
+}
+
+header span {
+	color: #cd110f;
+	font-size: 12px;
+	display: block;
+	margin-top: 20px;
+	float: left;
+	line-height: 14px;
+}
+
+.bgBlank {
+	background: #ffffff;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 60px;
+}
+
+/*******************
+
+	Header (menu)
+
+*******************/
+
+header .menuNormal {
+	list-style: none;
+	text-align: left;
+	margin-top: 20px;
+}
+
+header .menuNormal > li {
+	display: inline-block;
+	float: right;
+}
+
+header .menuNormal > li > a {
+	color: #cf1715;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-right: 50px;
+	font-size: 16px;
+	transition: all ease 0.3s;
+	text-decoration: none;
+}
+
+header .menuNormal > li:hover > a {
+	font-weight: 700;
+}
+
+header .menuNormal > li:hover {
+	text-decoration: none;
+}
+
+header .menuNormal > li > ul {
+	display: none;
+	list-style-type: none;
+	text-align: left;
+	transition: all ease 0.3s;
+	background-color: #ffffff;
+	padding: 10px;
+	margin-left: -50px;
+	border-radius: 0px 0px 8px 8px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+header .menuNormal > li:hover > ul {
+	display: block;
+}
+
+.sousMenu li {
+	padding: 5px 0;
+}
+
+.sousMenu li a {
+	text-decoration: none;
+	color: #cf1715;
+}
+
+.sousMenu li a:hover {
+	font-weight: 700;
+}
+
+/*******************
+
+	Header (burger)
+
+*******************/
+
+.menuBurger {
+	display: none;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(2) {
+	top: 14px;
+	position: absolute;
+	z-index: 2;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+	top: 6px;
+	position: absolute;
+	z-index: 2;
+}
+
+.navbar-toggle .icon-bar {
+	position: relative;
+	top: -2px;
+	transition: all 250ms ease-in-out;
+	z-index: 2;
+	background: color
+}
+
+.menuBurger:hover .icon-bar:nth-of-type(1) {
+	top: -10px;
+	transform: rotate(45deg);
+}
+
+.menuBurger:hover .icon-bar:nth-of-type(2) {
+	background-color: transparent;
+}
+
+.menuBurger:hover .icon-bar:nth-of-type(3) {
+	top: 14px;
+	transform: rotate(-45deg);
+}
+
+.menuBurger:hover .navbar-inverse .navbar-toggle {
+	border-color: white;
+	background-color: transparent;
+	z-index: 2;
+}
+
+.navbar-inverse .navbar-toggle {
+	border: none;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+	background-color: #cf1715;
+}
+
+
+@keyframes slideMenu {
+	from {
+		margin-right: -10%;
+		width: 0%;
+	}
+	to {
+		margin-right: 0;
+		width: 50%;
+	}
+}
+
+@media screen and (max-width:991px) {
+
+	
+	.citation {
+		display: none;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.menuNormal {
+		display: none;
+	}
+	.menuBurger {
+		list-style: none;
+		display: block;
+		margin-top: -8px;
+	}
+	.menuBurger:hover > li > ul {
+		display: block;
+		animation-name: slideMenu;
+		width: 50%;
+		animation-duration: 1s;
+	}
+	.menuBurger > li > ul {
+		position: absolute;
+		list-style: none;
+		top: 0;
+		right: 0;
+		display: none;
+		height: auto;
+		background-color: #ffffff;
+		padding-top: 50px;
+		border-radius: 0px 0px 0px 8px;
+		padding-bottom: 10px;
+	}
+	.menuBurger > li > ul > li {
+		padding: 10px 0;
+		transition: all 0.5s ease-in-out;
+	}
+	.menuBurger > li > ul > li > a {
+		color: #cf1715;
+		transition: all 0.3s ease-in-out;
+		text-decoration: none;
+	}
+	.menuBurger > li > ul > li:hover > a {
+		font-weight: 700;
+	}
+	.menuBurger > li > ul > li > ul {
+		padding-bottom: 10px;
+		padding-left: 2px;
+		margin: 0;
+		display: none;
+	}
+	.menuBurger > li > ul > li:hover > ul {
+		display: block;
+		list-style: none;
+	}
+	.menuBurger > li > ul > li > ul > li > a {
+		color: #cf1715;
+	}
+	.menuBurger > li > ul > li > ul > li {
+		padding-top: 15px;
+	}
+	.menuBurger > li > ul > li > ul > li:hover > a {
+		font-weight: 700;
+	}
+}
+
 
 /*-----------------------------------------------------------*/
 /*----------------formulaire de devis -----------------------*/
@@ -94,30 +347,32 @@ visibility: visible;
   width: 300px;
   margin-bottom:50px;
   outline: none;
+	font-size:16px;
   
 }
 
 
 .boutonConnexion{
-  color: #2394cc;
-  padding: 10px;
-  background-color:white;
-  border: none;
-  display: block;
-  float: none;
-  height: 50px;
-  margin-top: 30px;
-  font-size: 20px;
-  box-shadow: inset 0.3px 0.3px 9px 0.3px #656565;
-  border-radius: 5px; 
-  margin: auto;
+	display: block;
+	padding: 10px;
+	background-color: white;
+	border: none;
+	width: auto;
+	height: 50px;
+	margin: auto;
+	margin-top: 20px;
+	border-radius: 3px;
+	border-bottom: 4px solid #dbdbdb;
+	transition: all 0.5s ease;
+	font-size:20px;
+	font-family: 'oxfam_tstar_proregular', sans-serif;
+	color:#4fd0c7;
 
 }
 
 .boutonConnexion:hover{
-  background-color:#2394cc;
-  color:white;
-  box-shadow: inset 0.3px 0.3px 9px 0.3px white;
+	transition: all 0.3s ease;
+	border-bottom: 4px solid #FFFFFF;
 
 }
 
@@ -132,7 +387,6 @@ visibility: visible;
   top: 0;
   left: 0;
   display: inline-block;
-    top: px;
   left: 400px;
 }
 
@@ -140,10 +394,16 @@ visibility: visible;
 /*----------------administration des devis-------------------*/
 /*-----------------------------------------------------------*/
 
+#bodyGestion{
+background-color: floralwhite;
+
+}
+
+
 .corps{
   
-  border: 5px white solid ;
-  border-top: 30px white solid ;
+  border: 5px #0460bf solid ;
+  border-top: 30px #0460bf solid ;
   width: 650px;
   height : 450px;
   text-align: center;
@@ -154,50 +414,65 @@ visibility: visible;
 }
 
 .objet a{
- color: white;
+ color: #0460bf;
   text-decoration: none;
   font-size: 40px;
 }
 
 .secondaire a{
   
-  color: white;
+  color: #0460bf;
   text-decoration: none;
   font-size: 25px;
 }
 
 .boutonSUP{
-  color: #2394cc;
-  background-color:white;
+  color: #ffffff;
+  background-color:#0460bf;
   border: none;
   display: block;
   float: none;
-  width: 100px;
+  width: auto;
   height: 50px;
   font-size: 20px;
-  border-radius: 5px; 
+ 	border-radius: 3px;
+	border-bottom: 4px solid #033d79;
   margin-left: 180px;
   margin-top: 10px;
   float: left;
- 
 }
 
+.boutonSUP:hover{
+	transition: all 0.3s ease;
+	border-bottom: 4px solid #0460bf;
+}
 
 .boutonREP{
-  color: #2394cc;
-  background-color:white;
+  color: #ffffff;
+  background-color:#0460bf;
   border: none;
   display: block;
   float: none;
-  width: 100px;
+  width: auto;
   height: 50px;
   font-size: 20px;
-  border-radius: 5px; 
-  margin-right: 180px;
+ 	border-radius: 3px;
+	border-bottom: 4px solid #033d79;
+  margin-left: 180px;
   margin-top: 10px;
-  float: right;
- 
+  float: left;
 }
+
+.boutonREP:hover{
+	transition: all 0.3s ease;
+	border-bottom: 4px solid #0460bf;
+
+}
+
+.info{
+color:  #0460bf;
+}
+
 
 
 /*-----------------------------------------------------------*/
@@ -205,9 +480,9 @@ visibility: visible;
 /*-----------------------------------------------------------*/
 .alertA{
   font-size: 20px;
-  color: white;
+  color: #2394cc ;
   text-decoration: none;
-  border: 2px solid white;
+  border: 2px solid #2394cc;
 }
 
 .messageAlerte{
@@ -215,6 +490,7 @@ visibility: visible;
   width: 300px;
   margin: auto;
   margin-top: 350px;
+  color: #2394cc;
 }
 
 
@@ -224,22 +500,25 @@ visibility: visible;
 
 /* formulaire de connection */
 .girls_brownCo{
-  position: fixed;
+  display: block;
+  position: absolute;
   top: 220px;
-  left: 300px;
+  left: 20%;
   animation-duration: 1.5s;
   animation-delay: 1;
   animation-name: fadeInLeftBig;
+  width : 9%;
 
 }
 
 .homme_affaireCo{
   
-  position: fixed;
+  position: absolute;
   top: 220px;
-  right: 300px;
+  right: 20%;
   animation-duration: 1s;
   animation-name: fadeInDownBig;
+  width : 10%;
 }
 
 .parole{
@@ -250,21 +529,30 @@ visibility: visible;
   height: 150px;
   font-size: 20px;
   text-align: center;
-  position: fixed;
+  position: absolute;
   top: 0px;
-  left: 400px;
+  left: 30%;
   animation-duration: 2s;
   animation-name: fadeInDownBig;
   
 }
 
-.securite{
-  position: fixed;
-  top: 470px;
-  left: 500px;
-  animation-duration: 2s;
-  animation-name: fadeInUpBig;
+.connexion{
+	width:200px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size:20px;
+	margin-top: -100px;
 }
+
+form{
+	margin-top: 50px;
+}
+
+
+
+
 
 
 
@@ -317,25 +605,27 @@ visibility: visible;
   left: 570px;
   animation-duration: 2s;
   animation-name: fadeInUpBig;
+  width: 10%;
 }
 
 .girls_brownMess{
   position: fixed;
   top: 220px;
-  left: 300px;
+  left: 20%;
   animation-duration: 1.5s;
   animation-delay: 1;
   animation-name: fadeInLeftBig;
-
+  width: 9%;
 }
 
 .homme_affaireMess{
   
   position: fixed;
   top: 220px;
-  right: 300px;
+  right: 20%;
   animation-duration: 1s;
   animation-name: fadeInDownBig;
+   width: 10%;
 }
 
 
@@ -425,3 +715,70 @@ visibility: visible;
   right: 100px;
   animation-duration: 1.5s;
   animation-name: fadeInRightBig;
+}
+  
+  
+/*-----------------------------------------------------------*/
+/*--------------------------responsive---------820--------------*/
+/*-----------------------------------------------------------*/
+    @media screen and (max-width:1050px){
+.picto1,
+.picto2,
+.picto3,
+.picto4,
+.picto5,
+.picto6,
+.picto7,
+.picto8,
+.picto9,
+.picto10,
+.picto11,
+    .picto12{
+      
+      display: none;
+    }
+    
+}
+  
+  
+@media screen and (max-width:820px){
+    
+.mechant,
+.girls_brownMess,
+.homme_affaireMess,
+.homme_affaireCo,
+.girls_brownCo{
+  display: none;
+}
+  
+  .parole{
+background: none;
+    margin: auto;
+  
+}
+
+  }
+
+@media screen and (max-width:670px){
+    
+
+
+  
+  .parole{
+background: none;
+    left: 23%;
+  
+}
+  
+  @media screen and (max-width:550px){
+    
+
+
+  
+  .parole{
+background: none;
+    left: 10%;
+  
+}
+
+  }

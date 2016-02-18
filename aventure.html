@@ -12,41 +12,41 @@
 </head>
 
 <body onscroll='herve()'>
-  <header id="header">
+	  <header id="header">
     <div class="bgBlank">
       <div class="col-xs-4 col">
-        <a href="../index.html" title="accueil"><img src="images/logo_oops.png" alt="Logo oops" /></a>
+        <a href="index.html" title="accueil"><img src="images/logo_oops.png" alt="Logo oops" /></a>
         <span class="citation">Un clic pour tout retrouver...<br>Même le sourire !</span>
       </div>
       <div class="col-xs-8 menu">
         <nav>
           <ul class="menuNormal">
-            <li><a href="#" title="devis" class="menuDevis">Contact</a>
+            <li><a href="fo" title="devis" class="menuDevis">Contact</a>
               <ul class="sousMenu">
-                <li><a href="../pageDevis/devisEntreprise.php" title="devisEntreprise">Entreprise</a></li>
-                <li><a href="../pageDevis/devisRevendeur.php" title="devisRevendeur">Revendeur</a></li>
+                <li><a href="devisEntreprise.php" title="devisEntreprise">Entreprise</a></li>
+                <li><a href="devisRevendeur.php" title="devisRevendeur">Revendeur</a></li>
               </ul>
             </li>
             <li><a href="index.html" title="Aventure">Aventure</a></li>
-            <li><a href="#" title="Connexion">Espace membre</a></li>
+            <li><a href="formConnexion.php" title="Connexion">Espace membre</a></li>
           </ul>
           <ul class="menuBurger">
             <li>
               <div class="navbar-inverse ">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" id="burger" data-target=".navbar-collapse" onclick=changerClass()>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" id="burger" data-target=".navbar-collapse">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
               </div>
               <ul>
-                <li><a href="#" title="connexion">Connexion</a></li>
+                <li><a href="formConnexion.php" title="connexion">Espace membre</a></li>
 
                 <li><a href="index.html" title="aventure">Aventure</a></li>
-                <li><a href="#" title="devis" class="menuDevis">Devis</a>
+                <li><a href="#" title="devis" class="menuDevis">Contact</a>
                   <ul class="sousMenu">
-                    <li><a href="../pageDevis/devisEntreprise.php" title="devisEntreprise">Entreprise</a></li>
-                    <li><a href="../pageDevis/devisRevendeur.php" title="devisRevendeur">Revendeur</a></li>
+                    <li><a href="devisEntreprise.php" title="devisEntreprise">Entreprise</a></li>
+                    <li><a href="devisRevendeur.php" title="devisRevendeur">Revendeur</a></li>
                   </ul>
                 </li>
               </ul>
@@ -61,8 +61,8 @@
       <h1 class="pull-up">Oops, un objet connecté</h1>
       <h1 class="pull-up">qui s'adapte au monde professionnel</h1>
       <img src="images/rellOops.png" alt="Oops" id="realOops" class="pull-up">
-      <h2 class="pull-up">Faites défiler l'écran avec la molette de la souris</h2>
-      <img src="images/mouse-peripheral.png" alt="souris" id="mouse" class="pull-up">
+      <h2 class="pull-up">Faites défiler l'écran</h2>
+      <img src="images/scroll-arrow-to-down.png" alt="souris" id="mouse" class="pull-up">
     </div>
   </section>
   <section class="fond">
@@ -118,10 +118,7 @@
   </div>
   <script src="scripts/scrollreveal.min.js"></script>
   <script src="scripts/jquery-1.12.0.min.js"></script>
-  <script src="scripts/ScrollMagic.min.js"></script>
-  <script>
-  </script>
-  <script src="scripts/main.js"></script>
+  <script src="scripts/aventure.js"></script>
 </body>
 
 </html>

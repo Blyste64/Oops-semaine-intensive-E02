@@ -1,6 +1,7 @@
 * {
 	font-family: 'oxfam_tstar_proregular', sans-serif;
 	color: ghostwhite;
+	
 }
 
 body {
@@ -27,18 +28,34 @@ body#revendeur{
 }
 
 
+a:hover {
+	text-decoration: none;
+}
 
-/*************
+#contenu{
+	min-height: 550px;
+}
+.clearBoth {
+	clear: both;
+}
+/*******************
 
-header
+			HEADER
 
-*************/
+*******************/
 
 header {
 	width: 100%;
-	z-index: 30;
+	height: 70px;
+	z-index: 1000;
 	position: fixed;
 }
+
+/*******************
+
+	Header (logo)
+
+*******************/
 
 header p {
 	padding-top: 13px;
@@ -50,12 +67,6 @@ header img {
 	float: left;
 }
 
-header ul {
-	list-style: none;
-	text-align: right;
-	margin-top: 20px;
-}
-
 header span {
 	color: #cd110f;
 	font-size: 12px;
@@ -63,25 +74,6 @@ header span {
 	margin-top: 20px;
 	float: left;
 	line-height: 14px;
-}
-
-header ul li {
-	display: inline-block;
-}
-
-header ul li a {
-	color: #000000;
-	font-weight: 500;
-	text-transform: uppercase;
-	margin-right: 50px;
-	font-size: 16px;
-	transition: all ease 0.3s;
-	text-decoration: none;
-}
-
-header ul li a:hover {
-	color: #cd110f;
-	text-decoration: none;
 }
 
 .bgBlank {
@@ -92,6 +84,172 @@ header ul li a:hover {
 	right: 0;
 	left: 0;
 	height: 60px;
+}
+
+/*******************
+
+	Header (menu)
+
+*******************/
+
+header .menuNormal {
+	list-style: none;
+	text-align: left;
+	margin-top: 20px;
+}
+
+header .menuNormal > li {
+	display: inline-block;
+	float: right;
+}
+
+header .menuNormal > li > a {
+	color: #cf1715;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-right: 50px;
+	font-size: 16px;
+	transition: all ease 0.3s;
+	text-decoration: none;
+}
+
+header .menuNormal > li:hover > a {
+	font-weight: 700;
+}
+
+header .menuNormal > li:hover {
+	text-decoration: none;
+}
+
+header .menuNormal > li > ul {
+	display: none;
+	list-style-type: none;
+	text-align: left;
+	transition: all ease 0.3s;
+	background-color: #ffffff;
+	padding: 10px;
+	margin-left: -50px;
+	border-radius: 0px 0px 8px 8px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+header .menuNormal > li:hover > ul {
+	display: block;
+}
+
+.sousMenu li {
+	padding: 5px 0;
+}
+
+.sousMenu li a {
+	text-decoration: none;
+	color: #cf1715;
+}
+
+.sousMenu li a:hover {
+	font-weight: 700;
+}
+
+/*******************
+
+	Header (burger)
+
+*******************/
+
+.menuBurger {
+	display: none;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(2) {
+	top: 14px;
+	position: absolute;
+	z-index: 2;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+	top: 6px;
+	position: absolute;
+	z-index: 2;
+}
+
+.navbar-toggle .icon-bar {
+	position: relative;
+	top: -2px;
+	transition: all 250ms ease-in-out;
+	z-index: 2;
+	background: color
+}
+
+.menuBurger:hover .icon-bar:nth-of-type(1) {
+	top: -10px;
+	transform: rotate(45deg);
+}
+
+.menuBurger:hover .icon-bar:nth-of-type(2) {
+	background-color: transparent;
+}
+
+.menuBurger:hover .icon-bar:nth-of-type(3) {
+	top: 14px;
+	transform: rotate(-45deg);
+}
+
+.menuBurger:hover .navbar-inverse .navbar-toggle {
+	border-color: white;
+	background-color: transparent;
+	z-index: 2;
+}
+
+.navbar-inverse .navbar-toggle {
+	border: none;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+	background-color: #cf1715;
+}
+
+
+@keyframes slideMenu {
+	from {
+		margin-right: -10%;
+		width: 0%;
+	}
+	to {
+		margin-right: 0;
+		width: 50%;
+	}
+}
+
+
+
+/*****************
+
+FOOTER
+
+*****************/
+
+footer {
+	background-color: #ececec;
+	padding: 10px;
+	text-align: center;
+	margin-top: 140px;
+}
+
+.foot {
+	border-right: 1px solid black;
+}
+
+#all:first-child {
+	border-left: 1px solid black;
+}
+
+footer div div a {
+	color: black;
+}
+
+footer div div a:hover {
+	color: black;
 }
 
 
@@ -165,6 +323,10 @@ Label+input
 	outline: none;
 	font-size:20px;
 	font-size:16px;
+}
+
+label {
+	font-weight: 500;
 }
 
 
@@ -256,5 +418,73 @@ Animation appear
 	}
 	to {
 		opacity: 100%;
+	}
+}
+
+@media screen and (max-width:991px) {
+
+	
+	.citation {
+		display: none;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.menuNormal {
+		display: none;
+	}
+	.menuBurger {
+		list-style: none;
+		display: block;
+		margin-top: -8px;
+	}
+	.menuBurger:hover > li > ul {
+		display: block;
+		animation-name: slideMenu;
+		width: 50%;
+		animation-duration: 1s;
+	}
+	.menuBurger > li > ul {
+		position: absolute;
+		list-style: none;
+		top: 0;
+		right: 0;
+		display: none;
+		height: auto;
+		background-color: #ffffff;
+		padding-top: 50px;
+		border-radius: 0px 0px 0px 8px;
+		padding-bottom: 10px;
+	}
+	.menuBurger > li > ul > li {
+		padding: 10px 0;
+		transition: all 0.5s ease-in-out;
+	}
+	.menuBurger > li > ul > li > a {
+		color: #cf1715;
+		transition: all 0.3s ease-in-out;
+		text-decoration: none;
+	}
+	.menuBurger > li > ul > li:hover > a {
+		font-weight: 700;
+	}
+	.menuBurger > li > ul > li > ul {
+		padding-bottom: 10px;
+		padding-left: 2px;
+		margin: 0;
+		display: none;
+	}
+	.menuBurger > li > ul > li:hover > ul {
+		display: block;
+		list-style: none;
+	}
+	.menuBurger > li > ul > li > ul > li > a {
+		color: #cf1715;
+	}
+	.menuBurger > li > ul > li > ul > li {
+		padding-top: 15px;
+	}
+	.menuBurger > li > ul > li > ul > li:hover > a {
+		font-weight: 700;
 	}
 }
