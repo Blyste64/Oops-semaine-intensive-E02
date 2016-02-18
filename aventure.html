@@ -8,24 +8,27 @@
   <link rel="stylesheet" href="styles/bootstrap.min.css" />
   <link rel="stylesheet" href="webkit/stylesheet.css" />
   <link rel="stylesheet" href="styles/animsition.min.css" />
-  <link rel="stylesheet" href="styles/style.css" />
-  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="styles/aventure.css" />
 </head>
 
 <body onscroll='herve()'>
-  <header>
+  <header id="header">
     <div class="bgBlank">
-      <div class="col-xs-6 col">
+      <div class="col-xs-4 col">
         <a href="../index.html" title="accueil"><img src="images/logo_oops.png" alt="Logo oops" /></a>
-        <span>Un clic pour tout retrouver...<br>Même le sourire !</span>
+        <span class="citation">Un clic pour tout retrouver...<br>Même le sourire !</span>
       </div>
-      <div class="col-xs-6 menu">
+      <div class="col-xs-8 menu">
         <nav>
           <ul class="menuNormal">
-            <li><a href="#" title="Connexion">Espace membre</a></li>
+            <li><a href="#" title="devis" class="menuDevis">Contact</a>
+              <ul class="sousMenu">
+                <li><a href="../pageDevis/devisEntreprise.php" title="devisEntreprise">Entreprise</a></li>
+                <li><a href="../pageDevis/devisRevendeur.php" title="devisRevendeur">Revendeur</a></li>
+              </ul>
+            </li>
             <li><a href="index.html" title="Aventure">Aventure</a></li>
-            <li><a href="../pageDevis/devisEntreprise.php" title="devis entreprises">Devis Entreprises</a></li>
-            <li><a href="../pageDevis/devisRevendeur.php" title="devis revendeurs">Devis Revendeurs</a></li>
+            <li><a href="#" title="Connexion">Espace membre</a></li>
           </ul>
           <ul class="menuBurger">
             <li>
@@ -37,14 +40,15 @@
                 </button>
               </div>
               <ul>
-                <li><a href="#" title="connexion">connexion</a></li>
-                <li><a href="#" title="devis" class="menuDevis">devis</a>
+                <li><a href="#" title="connexion">Connexion</a></li>
+
+                <li><a href="index.html" title="aventure">Aventure</a></li>
+                <li><a href="#" title="devis" class="menuDevis">Devis</a>
                   <ul class="sousMenu">
-                    <li><a href="#" title="devisEntreprise">entreprise</a></li>
-                    <li><a href="#" title="devisRevendeur">revendeur</a></li>
+                    <li><a href="../pageDevis/devisEntreprise.php" title="devisEntreprise">Entreprise</a></li>
+                    <li><a href="../pageDevis/devisRevendeur.php" title="devisRevendeur">Revendeur</a></li>
                   </ul>
                 </li>
-                <li><a href="#" title="aventure">aventure</a></li>
               </ul>
             </li>
           </ul>
@@ -63,9 +67,6 @@
   </section>
   <section class="fond">
     <img src="images/fond.svg" alt="Fond" id="fond">
-  </section>
-  <section class="nuages">
-    <img src="images/nuage.svg" alt="nuages" id="nuages" data-0="top: 0px;" data-2000="top:-700px;">
   </section>
   <div class="container-fluid">
     <section id="oopsSection">
@@ -117,7 +118,7 @@
   </div>
   <script src="scripts/scrollreveal.min.js"></script>
   <script src="scripts/jquery-1.12.0.min.js"></script>
-  <script src="scripts/skrollr.min.js"></script>
+  <script src="scripts/ScrollMagic.min.js"></script>
   <script>
   </script>
   <script src="scripts/main.js"></script>

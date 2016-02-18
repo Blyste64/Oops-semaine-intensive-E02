@@ -7,52 +7,57 @@
     <link rel="stylesheet" href="styles/devis.css">
     <link rel="stylesheet" href="webkit/stylesheet.css">
     <link rel="stylesheet" href="styles/bootstrap.min.css" />
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Devis entreprise</title>
   </head>
 
 
 
   <body id="entreprise">
-    <header>
-      <div class="bgBlank">
-        <div class="col-xs-6 col">
-          <a href="../index.html" title="accueil"><img src="images/logo_oops.png" alt="Logo oops" /></a>
-          <span>Un clic pour tout retrouver...<br>Même le sourire !</span>
-        </div>
-        <div class="col-xs-6 menu">
-          <nav>
-            <ul class="menuNormal">
-              <li><a href="#" title="Connexion">Espace membre</a></li>
-              <li><a href="../pagesAventure/index.html" title="Aventure">Aventure</a></li>
-              <li><a href="devisEntreprise.php" title="devis entreprises">Devis Entreprises</a></li>
-              <li><a href="devisRevendeur.php" title="devis revendeurs">Devis Revendeurs</a></li>
-            </ul>
-            <ul class="menuBurger">
-              <li>
-                <div class="navbar-inverse ">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" id="burger" data-target=".navbar-collapse" onclick=changerClass()>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                </div>
-                <ul>
-                  <li><a href="#" title="connexion">connexion</a></li>
-                  <li><a href="#" title="devis" class="menuDevis">devis</a>
-                    <ul class="sousMenu">
-                      <li><a href="#" title="devisEntreprise">entreprise</a></li>
-                      <li><a href="#" title="devisRevendeur">revendeur</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#" title="aventure">aventure</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        </div>
+   <header id="header">
+    <div class="bgBlank">
+      <div class="col-xs-4 col">
+        <a href="../index.html" title="accueil"><img src="images/logo_oops.png" alt="Logo oops" /></a>
+        <span class="citation">Un clic pour tout retrouver...<br>Même le sourire !</span>
       </div>
-    </header>
+      <div class="col-xs-8 menu">
+        <nav>
+          <ul class="menuNormal">
+            <li><a href="#" title="devis" class="menuDevis">Contact</a>
+              <ul class="sousMenu">
+                <li><a href="../pageDevis/devisEntreprise.php" title="devisEntreprise">Entreprise</a></li>
+                <li><a href="../pageDevis/devisRevendeur.php" title="devisRevendeur">Revendeur</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html" title="Aventure">Aventure</a></li>
+            <li><a href="#" title="Connexion">Espace membre</a></li>
+          </ul>
+          <ul class="menuBurger">
+            <li>
+              <div class="navbar-inverse ">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" id="burger" data-target=".navbar-collapse" onclick=changerClass()>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <ul>
+                <li><a href="#" title="connexion">Connexion</a></li>
+
+                <li><a href="index.html" title="aventure">Aventure</a></li>
+                <li><a href="#" title="devis" class="menuDevis">Devis</a>
+                  <ul class="sousMenu">
+                    <li><a href="../pageDevis/devisEntreprise.php" title="devisEntreprise">Entreprise</a></li>
+                    <li><a href="../pageDevis/devisRevendeur.php" title="devisRevendeur">Revendeur</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
     <div id="map">
 
       <p id="entreprise">Faites comme eux,

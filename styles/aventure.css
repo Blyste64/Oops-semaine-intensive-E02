@@ -9,69 +9,192 @@ body {
   clear: Both;
 }
 
-.block {
-  display: block;
-  margin: auto;
-}
 
+/*******************
 
-/*************
+			HEADER
 
-header
-
-*************/
+*******************/
 
 header {
-  width: 100%;
-  z-index: 30;
-  position: fixed;
-  background: #ffffff;
-  top: 0;
+	width: 100%;
+	height: 70px;
+	z-index: 1000;
+	position: fixed;
 }
 
+/*******************
+
+	Header (logo)
+
+*******************/
+
 header p {
-  padding-top: 13px;
+	padding-top: 13px;
 }
 
 header img {
-  margin-left: 50px;
-  width: 60px;
-  float: left;
-}
-
-header ul {
-  list-style: none;
-  text-align: right;
-  margin-top: 20px;
+	margin-left: 50px;
+	width: 60px;
+	float: left;
 }
 
 header span {
-  color: #cd110f;
-  font-size: 12px;
-  display: block;
-  margin-top: 20px;
-  float: left;
-  line-height: 14px;
+	color: #cd110f;
+	font-size: 12px;
+	display: block;
+	margin-top: 20px;
+	float: left;
+	line-height: 14px;
 }
 
-header ul li {
-  display: inline-block;
+.bgBlank {
+	background: #ffffff;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 60px;
 }
 
-header ul li a {
-  color: #000000;
-  font-weight: 500;
-  text-transform: uppercase;
-  margin-right: 50px;
-  font-size: 16px;
-  transition: all ease 0.3s;
-  text-decoration: none;
+/*******************
+
+	Header (menu)
+
+*******************/
+
+header .menuNormal {
+	list-style: none;
+	text-align: left;
+	margin-top: 20px;
 }
 
-header ul li a:hover {
-  color: #cd110f;
-  text-decoration: none;
+header .menuNormal > li {
+	display: inline-block;
+	float: right;
 }
+
+header .menuNormal > li > a {
+	color: #cf1715;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-right: 50px;
+	font-size: 16px;
+	transition: all ease 0.3s;
+	text-decoration: none;
+}
+
+header .menuNormal > li:hover > a {
+	font-weight: 700;
+}
+
+header .menuNormal > li:hover {
+	text-decoration: none;
+}
+
+header .menuNormal > li > ul {
+	display: none;
+	list-style-type: none;
+	text-align: left;
+	transition: all ease 0.3s;
+	background-color: #ffffff;
+	padding: 10px;
+	margin-left: -50px;
+	border-radius: 0px 0px 8px 8px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+header .menuNormal > li:hover > ul {
+	display: block;
+}
+
+.sousMenu li {
+	padding: 5px 0;
+}
+
+.sousMenu li a {
+	text-decoration: none;
+	color: #cf1715;
+}
+
+.sousMenu li a:hover {
+	font-weight: 700;
+}
+
+/*******************
+
+	Header (burger)
+
+*******************/
+
+.menuBurger {
+	display: none;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(2) {
+	top: 14px;
+	position: absolute;
+	z-index: 2;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+	top: 6px;
+	position: absolute;
+	z-index: 2;
+}
+
+.navbar-toggle .icon-bar {
+	position: relative;
+	top: -2px;
+	transition: all 250ms ease-in-out;
+	z-index: 2;
+	background: color
+}
+
+.menuBurger:hover .icon-bar:nth-of-type(1) {
+	top: -10px;
+	transform: rotate(45deg);
+}
+
+.menuBurger:hover .icon-bar:nth-of-type(2) {
+	background-color: transparent;
+}
+
+.menuBurger:hover .icon-bar:nth-of-type(3) {
+	top: 14px;
+	transform: rotate(-45deg);
+}
+
+.menuBurger:hover .navbar-inverse .navbar-toggle {
+	border-color: white;
+	background-color: transparent;
+	z-index: 2;
+}
+
+.navbar-inverse .navbar-toggle {
+	border: none;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+	background-color: #cf1715;
+}
+
+
+@keyframes slideMenu {
+	from {
+		margin-right: -10%;
+		width: 0%;
+	}
+	to {
+		margin-right: 0;
+		width: 50%;
+	}
+}
+
+
+
 
 
 /***********
@@ -145,7 +268,7 @@ acceuil
 
 .acceuilRevendeur h1 {
   padding-top: 10vw;
-  font-size: 5vw;
+  font-size:5vw;
 }
 
 
@@ -169,15 +292,6 @@ Oops et chemin
   top: 99%;
   left: 0;
   z-index: -1;
-  right: 0;
-}
-
-#nuages {
-  width: 100%;
-  position: absolute;
-  top: 99%;
-  left: 0;
-  z-index: 100;
   right: 0;
 }
 
@@ -218,6 +332,7 @@ Presentation
   text-align: center;
   color: #ffffff;
   margin-top: 5vw;
+  z-index:50;
 }
 
 .pres section h2 {
@@ -235,7 +350,8 @@ Presentation
 .pres2 section {
   text-align: center;
   color: #ffffff;
-  margin-top: 0vw;
+  margin-top: 5vw;
+  z-index:50;
 }
 
 .pres2 section h2 {
@@ -250,24 +366,48 @@ Presentation
   width: 14vw;
 }
 
+.pres3 section {
+  text-align: center;
+  color: #ffffff;
+  margin-top: 2vw;
+  z-index:50;
+}
+
+.pres3 section h2 {
+  font-size: 2.5vw;
+  width: 80%;
+  margin: 0% 10%;
+  margin-bottom: 50px;
+  padding: 0px 50px;
+}
+
+.pres3 section img {
+  width: 14vw;
+}
+
 #madeInFrance {
   margin-top: 70%;
 }
 
 #cadeau {
-  margin-top: 25%;
+  margin-top: 15%;
+}
+
+#devis{
+  padding-top:20vw;
+}
+
+#devis2{
+  padding-top:5vw;
+}
+
+#clikCollect{
+  margin-top:23%;
 }
 
 #portee h2 {
   margin-bottom: 80px;
 }
-
-
-/**************
-
-nuages parallax
-
-***************/
 
 
 /***************
@@ -290,17 +430,19 @@ Section pro
 
 #buttons a {
   padding: 1.5vw 2vw;
-  border-bottom: solid #2c9d95 5px;
+  border-bottom: solid #2c9d95 4px;
   color: #ffffff;
   transition: all ease 0.3s;
   background: none;
   font-size: 1.5vw;
   background: #3eccc2;
+  border-radius: 5px;
 }
 
 #buttons a:hover {
-  background: #2c9d95;
+  border-bottom: solid #3eccc2 4px;
   text-decoration: none;
+  transition: all ease 0.3s
 }
 
 #click {
@@ -355,7 +497,7 @@ Media queries
     margin-top: 3vw;
   }
   #madeInFrance {
-    margin-top: 197%;
+    margin-top: 170%;
   }
   #herve {
     top: 80%;
@@ -379,35 +521,69 @@ Media queries
   .pres2 section {
     text-align: center;
     color: #ffffff;
-    margin-top: 5vw;
+    margin-top: 10vw;
   }
 }
 
-
-/****************
-
-footer
-
-**************/
-
-footer {
-  background-color: #ececec;
-  padding: 10px;
-  text-align: center;
-}
-
-.foot {
-  border-right: 1px solid black;
-}
-
-#all:first-child {
-  border-left: 1px solid black;
-}
-
-footer div div a {
-  color: black;
-}
-
-footer div div a:hover {
-  color: black;
+@media screen and (max-width:991px) {
+	.navbar-toggle {
+		display: block;
+	}
+	.menuNormal {
+		display: none;
+	}
+	.menuBurger {
+		list-style: none;
+		display: block;
+		margin-top: -8px;
+	}
+	.menuBurger:hover > li > ul {
+		display: block;
+		animation-name: slideMenu;
+		width: 50%;
+		animation-duration: 1s;
+	}
+	.menuBurger > li > ul {
+		position: absolute;
+		list-style: none;
+		top: 0;
+		right: 0;
+		display: none;
+		height: auto;
+		background-color: #ffffff;
+		padding-top: 50px;
+		border-radius: 0px 0px 0px 8px;
+		padding-bottom: 10px;
+	}
+	.menuBurger > li > ul > li {
+		padding: 10px 0;
+		transition: all 0.5s ease-in-out;
+	}
+	.menuBurger > li > ul > li > a {
+		color: #cf1715;
+		transition: all 0.3s ease-in-out;
+		text-decoration: none;
+	}
+	.menuBurger > li > ul > li:hover > a {
+		font-weight: 700;
+	}
+	.menuBurger > li > ul > li > ul {
+		padding-bottom: 10px;
+		padding-left: 2px;
+		margin: 0;
+		display: none;
+	}
+	.menuBurger > li > ul > li:hover > ul {
+		display: block;
+		list-style: none;
+	}
+	.menuBurger > li > ul > li > ul > li > a {
+		color: #cf1715;
+	}
+	.menuBurger > li > ul > li > ul > li {
+		padding-top: 15px;
+	}
+	.menuBurger > li > ul > li > ul > li:hover > a {
+		font-weight: 700;
+	}
 }
